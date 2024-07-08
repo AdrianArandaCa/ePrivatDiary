@@ -7,20 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AD9E4DA2C3BFE4B00895381 /* PageViewModelIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9E4D92C3BFE4B00895381 /* PageViewModelIntegrationTest.swift */; };
 		3AFDA13F2C3B2D00001EDD6C /* ePrivatDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA13E2C3B2D00001EDD6C /* ePrivatDiaryApp.swift */; };
 		3AFDA1412C3B2D00001EDD6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA1402C3B2D00001EDD6C /* ContentView.swift */; };
-		3AFDA1432C3B2D00001EDD6C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA1422C3B2D00001EDD6C /* Item.swift */; };
 		3AFDA1452C3B2D02001EDD6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFDA1442C3B2D02001EDD6C /* Assets.xcassets */; };
 		3AFDA1482C3B2D02001EDD6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFDA1472C3B2D02001EDD6C /* Preview Assets.xcassets */; };
+		3AFDA14F2C3B2E9C001EDD6C /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA14E2C3B2E9C001EDD6C /* PageModel.swift */; };
+		3AFDA1592C3B2FAE001EDD6C /* PageModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA1582C3B2FAE001EDD6C /* PageModelTest.swift */; };
+		3AFDA1612C3B3392001EDD6C /* PageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA1602C3B3392001EDD6C /* PageDataSource.swift */; };
+		3AFDA1652C3B37B8001EDD6C /* CreatePageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA1642C3B37B8001EDD6C /* CreatePageUseCase.swift */; };
+		3AFDA1672C3B37C2001EDD6C /* UpdatePageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA1662C3B37C2001EDD6C /* UpdatePageUseCase.swift */; };
+		3AFDA1692C3B37C9001EDD6C /* RemovePageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA1682C3B37C9001EDD6C /* RemovePageUseCase.swift */; };
+		3AFDA16B2C3B37D2001EDD6C /* FetchAllNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA16A2C3B37D2001EDD6C /* FetchAllNoteUseCase.swift */; };
+		3AFDA16D2C3B380A001EDD6C /* EncryptationPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA16C2C3B380A001EDD6C /* EncryptationPageUseCase.swift */; };
+		3AFDA1742C3B3F89001EDD6C /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA1732C3B3F89001EDD6C /* PageViewModel.swift */; };
+		3AFDA1762C3B4347001EDD6C /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA1752C3B4347001EDD6C /* Mocks.swift */; };
+		3AFDA1792C3B44EA001EDD6C /* PageViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA1782C3B44EA001EDD6C /* PageViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3AFDA15A2C3B2FAE001EDD6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AFDA1332C3B2D00001EDD6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AFDA13A2C3B2D00001EDD6C;
+			remoteInfo = ePrivatDiary;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3AD9E4D92C3BFE4B00895381 /* PageViewModelIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModelIntegrationTest.swift; sourceTree = "<group>"; };
 		3AFDA13B2C3B2D00001EDD6C /* ePrivatDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ePrivatDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFDA13E2C3B2D00001EDD6C /* ePrivatDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ePrivatDiaryApp.swift; sourceTree = "<group>"; };
 		3AFDA1402C3B2D00001EDD6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3AFDA1422C3B2D00001EDD6C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		3AFDA1442C3B2D02001EDD6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AFDA1472C3B2D02001EDD6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3AFDA14E2C3B2E9C001EDD6C /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		3AFDA1562C3B2FAE001EDD6C /* ePrivatDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ePrivatDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AFDA1582C3B2FAE001EDD6C /* PageModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModelTest.swift; sourceTree = "<group>"; };
+		3AFDA1602C3B3392001EDD6C /* PageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDataSource.swift; sourceTree = "<group>"; };
+		3AFDA1642C3B37B8001EDD6C /* CreatePageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePageUseCase.swift; sourceTree = "<group>"; };
+		3AFDA1662C3B37C2001EDD6C /* UpdatePageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePageUseCase.swift; sourceTree = "<group>"; };
+		3AFDA1682C3B37C9001EDD6C /* RemovePageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemovePageUseCase.swift; sourceTree = "<group>"; };
+		3AFDA16A2C3B37D2001EDD6C /* FetchAllNoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAllNoteUseCase.swift; sourceTree = "<group>"; };
+		3AFDA16C2C3B380A001EDD6C /* EncryptationPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptationPageUseCase.swift; sourceTree = "<group>"; };
+		3AFDA1732C3B3F89001EDD6C /* PageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModel.swift; sourceTree = "<group>"; };
+		3AFDA1752C3B4347001EDD6C /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		3AFDA1782C3B44EA001EDD6C /* PageViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,13 +64,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AFDA1532C3B2FAE001EDD6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AD9E4DB2C3C031C00895381 /* IntegrationTest */ = {
+			isa = PBXGroup;
+			children = (
+				3AD9E4D92C3BFE4B00895381 /* PageViewModelIntegrationTest.swift */,
+			);
+			path = IntegrationTest;
+			sourceTree = "<group>";
+		};
+		3AD9E4DC2C3C039800895381 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3AFDA1732C3B3F89001EDD6C /* PageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3AFDA1322C3B2D00001EDD6C = {
 			isa = PBXGroup;
 			children = (
 				3AFDA13D2C3B2D00001EDD6C /* ePrivatDiary */,
+				3AFDA1572C3B2FAE001EDD6C /* ePrivatDiaryTests */,
 				3AFDA13C2C3B2D00001EDD6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				3AFDA13B2C3B2D00001EDD6C /* ePrivatDiary.app */,
+				3AFDA1562C3B2FAE001EDD6C /* ePrivatDiaryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,7 +113,10 @@
 			children = (
 				3AFDA13E2C3B2D00001EDD6C /* ePrivatDiaryApp.swift */,
 				3AFDA1402C3B2D00001EDD6C /* ContentView.swift */,
-				3AFDA1422C3B2D00001EDD6C /* Item.swift */,
+				3AD9E4DC2C3C039800895381 /* ViewModel */,
+				3AFDA1702C3B3DE2001EDD6C /* UseCase */,
+				3AFDA1632C3B373D001EDD6C /* DataSource */,
+				3AFDA15F2C3B337F001EDD6C /* Model */,
 				3AFDA1442C3B2D02001EDD6C /* Assets.xcassets */,
 				3AFDA1462C3B2D02001EDD6C /* Preview Content */,
 			);
@@ -68,6 +129,61 @@
 				3AFDA1472C3B2D02001EDD6C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3AFDA1572C3B2FAE001EDD6C /* ePrivatDiaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				3AFDA1772C3B4350001EDD6C /* Mocks */,
+				3AFDA1622C3B36AC001EDD6C /* Unit Test */,
+				3AD9E4DB2C3C031C00895381 /* IntegrationTest */,
+			);
+			path = ePrivatDiaryTests;
+			sourceTree = "<group>";
+		};
+		3AFDA15F2C3B337F001EDD6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AFDA14E2C3B2E9C001EDD6C /* PageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AFDA1622C3B36AC001EDD6C /* Unit Test */ = {
+			isa = PBXGroup;
+			children = (
+				3AFDA1582C3B2FAE001EDD6C /* PageModelTest.swift */,
+				3AFDA1782C3B44EA001EDD6C /* PageViewModelTest.swift */,
+			);
+			path = "Unit Test";
+			sourceTree = "<group>";
+		};
+		3AFDA1632C3B373D001EDD6C /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3AFDA1602C3B3392001EDD6C /* PageDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		3AFDA1702C3B3DE2001EDD6C /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				3AFDA1642C3B37B8001EDD6C /* CreatePageUseCase.swift */,
+				3AFDA1662C3B37C2001EDD6C /* UpdatePageUseCase.swift */,
+				3AFDA1682C3B37C9001EDD6C /* RemovePageUseCase.swift */,
+				3AFDA16A2C3B37D2001EDD6C /* FetchAllNoteUseCase.swift */,
+				3AFDA16C2C3B380A001EDD6C /* EncryptationPageUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		3AFDA1772C3B4350001EDD6C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3AFDA1752C3B4347001EDD6C /* Mocks.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +206,24 @@
 			productReference = 3AFDA13B2C3B2D00001EDD6C /* ePrivatDiary.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3AFDA1552C3B2FAE001EDD6C /* ePrivatDiaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AFDA15C2C3B2FAE001EDD6C /* Build configuration list for PBXNativeTarget "ePrivatDiaryTests" */;
+			buildPhases = (
+				3AFDA1522C3B2FAE001EDD6C /* Sources */,
+				3AFDA1532C3B2FAE001EDD6C /* Frameworks */,
+				3AFDA1542C3B2FAE001EDD6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AFDA15B2C3B2FAE001EDD6C /* PBXTargetDependency */,
+			);
+			name = ePrivatDiaryTests;
+			productName = ePrivatDiaryTests;
+			productReference = 3AFDA1562C3B2FAE001EDD6C /* ePrivatDiaryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,6 +236,10 @@
 				TargetAttributes = {
 					3AFDA13A2C3B2D00001EDD6C = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					3AFDA1552C3B2FAE001EDD6C = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 3AFDA13A2C3B2D00001EDD6C;
 					};
 				};
 			};
@@ -119,6 +257,7 @@
 			projectRoot = "";
 			targets = (
 				3AFDA13A2C3B2D00001EDD6C /* ePrivatDiary */,
+				3AFDA1552C3B2FAE001EDD6C /* ePrivatDiaryTests */,
 			);
 		};
 /* End PBXProject section */
@@ -133,6 +272,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AFDA1542C3B2FAE001EDD6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,13 +286,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AFDA1742C3B3F89001EDD6C /* PageViewModel.swift in Sources */,
+				3AFDA1612C3B3392001EDD6C /* PageDataSource.swift in Sources */,
+				3AFDA14F2C3B2E9C001EDD6C /* PageModel.swift in Sources */,
 				3AFDA1412C3B2D00001EDD6C /* ContentView.swift in Sources */,
-				3AFDA1432C3B2D00001EDD6C /* Item.swift in Sources */,
+				3AFDA1672C3B37C2001EDD6C /* UpdatePageUseCase.swift in Sources */,
+				3AFDA1692C3B37C9001EDD6C /* RemovePageUseCase.swift in Sources */,
+				3AFDA16B2C3B37D2001EDD6C /* FetchAllNoteUseCase.swift in Sources */,
+				3AFDA1652C3B37B8001EDD6C /* CreatePageUseCase.swift in Sources */,
+				3AFDA16D2C3B380A001EDD6C /* EncryptationPageUseCase.swift in Sources */,
 				3AFDA13F2C3B2D00001EDD6C /* ePrivatDiaryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AFDA1522C3B2FAE001EDD6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AFDA1592C3B2FAE001EDD6C /* PageModelTest.swift in Sources */,
+				3AFDA1792C3B44EA001EDD6C /* PageViewModelTest.swift in Sources */,
+				3AD9E4DA2C3BFE4B00895381 /* PageViewModelIntegrationTest.swift in Sources */,
+				3AFDA1762C3B4347001EDD6C /* Mocks.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AFDA15B2C3B2FAE001EDD6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AFDA13A2C3B2D00001EDD6C /* ePrivatDiary */;
+			targetProxy = 3AFDA15A2C3B2FAE001EDD6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3AFDA1492C3B2D02001EDD6C /* Debug */ = {
@@ -326,6 +498,42 @@
 			};
 			name = Release;
 		};
+		3AFDA15D2C3B2FAE001EDD6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6D7K8WYW6Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianaranda.ePrivatDiaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ePrivatDiary.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ePrivatDiary";
+			};
+			name = Debug;
+		};
+		3AFDA15E2C3B2FAE001EDD6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6D7K8WYW6Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianaranda.ePrivatDiaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ePrivatDiary.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ePrivatDiary";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -343,6 +551,15 @@
 			buildConfigurations = (
 				3AFDA14C2C3B2D02001EDD6C /* Debug */,
 				3AFDA14D2C3B2D02001EDD6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AFDA15C2C3B2FAE001EDD6C /* Build configuration list for PBXNativeTarget "ePrivatDiaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AFDA15D2C3B2FAE001EDD6C /* Debug */,
+				3AFDA15E2C3B2FAE001EDD6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
