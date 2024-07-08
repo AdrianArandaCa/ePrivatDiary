@@ -21,7 +21,7 @@ class PageViewModel {
     private var removePageUseCase: RemovePageProtocol
     
     init(pages: [PageModel] = [],
-         keyEncryptation: String?,
+         keyEncryptation: String? = "",
          createPageUseCase: CreatePageProtocol = CreatePageUseCase(),
          fetchAllPagesUseCase: FetchAllPageProtocol = FetchAllPageUseCase(),
          updatePageUseCase: UpdatePageProtocol = UpdatePageUseCase(),

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3AD9E4DA2C3BFE4B00895381 /* PageViewModelIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9E4D92C3BFE4B00895381 /* PageViewModelIntegrationTest.swift */; };
+		3AD9E4DE2C3C053C00895381 /* CreatePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9E4DD2C3C053C00895381 /* CreatePageView.swift */; };
+		3AD9E4E02C3C063B00895381 /* UpdatePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9E4DF2C3C063B00895381 /* UpdatePageView.swift */; };
 		3AFDA13F2C3B2D00001EDD6C /* ePrivatDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA13E2C3B2D00001EDD6C /* ePrivatDiaryApp.swift */; };
 		3AFDA1412C3B2D00001EDD6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA1402C3B2D00001EDD6C /* ContentView.swift */; };
 		3AFDA1452C3B2D02001EDD6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFDA1442C3B2D02001EDD6C /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		3AD9E4D92C3BFE4B00895381 /* PageViewModelIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModelIntegrationTest.swift; sourceTree = "<group>"; };
+		3AD9E4DD2C3C053C00895381 /* CreatePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePageView.swift; sourceTree = "<group>"; };
+		3AD9E4DF2C3C063B00895381 /* UpdatePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePageView.swift; sourceTree = "<group>"; };
 		3AFDA13B2C3B2D00001EDD6C /* ePrivatDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ePrivatDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFDA13E2C3B2D00001EDD6C /* ePrivatDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ePrivatDiaryApp.swift; sourceTree = "<group>"; };
 		3AFDA1402C3B2D00001EDD6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AD5F8DC2C3C0968001E5BBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AD9E4DD2C3C053C00895381 /* CreatePageView.swift */,
+				3AD9E4DF2C3C063B00895381 /* UpdatePageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3AD9E4DB2C3C031C00895381 /* IntegrationTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +126,7 @@
 			children = (
 				3AFDA13E2C3B2D00001EDD6C /* ePrivatDiaryApp.swift */,
 				3AFDA1402C3B2D00001EDD6C /* ContentView.swift */,
+				3AD5F8DC2C3C0968001E5BBA /* Views */,
 				3AD9E4DC2C3C039800895381 /* ViewModel */,
 				3AFDA1702C3B3DE2001EDD6C /* UseCase */,
 				3AFDA1632C3B373D001EDD6C /* DataSource */,
@@ -288,6 +302,8 @@
 			files = (
 				3AFDA1742C3B3F89001EDD6C /* PageViewModel.swift in Sources */,
 				3AFDA1612C3B3392001EDD6C /* PageDataSource.swift in Sources */,
+				3AD9E4E02C3C063B00895381 /* UpdatePageView.swift in Sources */,
+				3AD9E4DE2C3C053C00895381 /* CreatePageView.swift in Sources */,
 				3AFDA14F2C3B2E9C001EDD6C /* PageModel.swift in Sources */,
 				3AFDA1412C3B2D00001EDD6C /* ContentView.swift in Sources */,
 				3AFDA1672C3B37C2001EDD6C /* UpdatePageUseCase.swift in Sources */,

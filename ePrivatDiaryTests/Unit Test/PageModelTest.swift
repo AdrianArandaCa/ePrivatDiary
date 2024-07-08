@@ -54,5 +54,22 @@ final class ePrivatDiaryTests: XCTestCase {
         XCTAssertEqual(page.getText, "")
         XCTAssertNil(page.encripted)
     }
-
+    
+    func testGetDate() {
+        // Given
+        let dateComponents = DateComponents(year: 2024, month: 7, day: 8, hour: 16, minute: 30)
+        let testDate = Calendar.current.date(from: dateComponents)!
+        
+        //When
+        let page = PageModel(title: "Test Title", encripted: nil, createdAt: testDate, feedback: .happy)
+        let dateString = page.getDate()
+        
+        // Then
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        let expectedDate = dateFormatter.string(from: testDate)
+        
+        XCTAssertEqual(dateString, expectedDate)
+    }
 }

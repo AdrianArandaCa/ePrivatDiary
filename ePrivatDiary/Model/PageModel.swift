@@ -35,4 +35,12 @@ class PageModel: Identifiable, Hashable {
         self.feedback = feedback
         self.encripted = encripted
     }
+    
+    func getDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        
+        return dateFormatter.string(from: createdAt)
+    }
 }
