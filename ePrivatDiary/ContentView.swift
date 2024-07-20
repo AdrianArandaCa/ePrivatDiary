@@ -10,21 +10,52 @@ import SwiftUI
 struct ContentView: View {
     @State var viewModel: PageViewModel = .init()
     @State private var showCreateNote = false
+    @State var showPasswordAlert = false
+    @State var showUpdatePage = false
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(viewModel.pages) { pages in
-                    NavigationLink(value: pages) {
+                ForEach(viewModel.pages) { page in
+                    Button(action: {
+                        viewModel.selectedPage = page
+                        showPasswordAlert = true
+                    }) {
                         VStack(alignment: .leading) {
-                            Text(pages.title)
-                                .foregroundStyle(.primary)
-                            Text(pages.getDate())
+                            HStack {
+                                Text(page.title)
+                                    .foregroundStyle(.primary)
+                                Spacer()
+                                if page.feedback == .happy {
+                                    Text("😀")
+                                }  else if page.feedback == .neutral {
+                                    Text("😐")
+                                } else if page.feedback == .sad {
+                                    Text("😢")
+                                }
+                            }
+                            Text(page.getDate())
                                 .foregroundStyle(.secondary)
                         }
                     }
+                    .swipeActions(edge: .leading) {
+                        Button(action: {
+                            viewModel.removePage(identifier: page.identifier)
+                        }, label: {
+                            Label("Borrar", systemImage: "trash.fill")
+                        })
+                        .tint(.red)
+                    }
                 }
             }
+            .textFieldAlert(isPresented: $showPasswordAlert, viewModel: viewModel, action: { success in
+                if success {
+                    showPasswordAlert = false
+                    showUpdatePage = true
+                } else {
+                    showUpdatePage = false
+                }
+            })
             .toolbar {
                 ToolbarItem(placement: .status) {
                     Button(action: {
@@ -39,8 +70,12 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Paginas")
-            .navigationDestination(for: PageModel.self, destination: { page in
-                UpdatePageView(viewModel: viewModel, identifier: page.identifier, title: page.title, text: page.text ?? "")
+            .fullScreenCover(isPresented: $showUpdatePage, content: {
+                if let page = viewModel.selectedPage {
+                    UpdatePageView(viewModel: viewModel, page: page)
+                } else {
+                    EmptyView()
+                }
             })
             .fullScreenCover(isPresented: $showCreateNote, content: {
                 CreatePageView(viewModel: viewModel)

@@ -22,8 +22,7 @@ final class PageViewModelIntegrationTest: XCTestCase {
         let fetchAllPageUseCase = FetchAllPageUseCase(pageDatasource: database)
         let removePageUseCase = RemovePageUseCase(pageDatasource: database)
         
-        sut = PageViewModel(keyEncryptation: "123",
-                            createPageUseCase: createPageUseCase,
+        sut = PageViewModel(keyEncryptation: "123" ,createPageUseCase: createPageUseCase,
                             fetchAllPagesUseCase: fetchAllPageUseCase,
                             updatePageUseCase: updatePageUseCase,
                             removePageUseCase: removePageUseCase)

@@ -12,7 +12,8 @@ struct CreatePageView: View {
     var viewModel: PageViewModel
     @State private var title = ""
     @State private var text = ""
-    @State private var feedback: Feedback = .neutral
+    @State private var feedback: Feedback?
+    @State private var showPasswordAlert: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -25,25 +26,84 @@ struct CreatePageView: View {
                 } footer: {
                     Text("* El titulo es obligatorio")
                 }
-            }
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Text("Cerrar")
-                    }
-                }
                 
-                ToolbarItem {
-                    Button {
-                        viewModel.createPage(title: title, text: text, feedback: feedback)
-                        dismiss()
-                    } label: {
-                        Text("Crear nota")
+                Section {
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            feedback = .happy
+                        }) {
+                            Text("😊")
+                                .font(.largeTitle)
+                                .padding()
+                                .background(feedback == .happy ? Color.yellow.opacity(0.3) : Color.clear)
+                                .clipShape(Circle())
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        Spacer()
+                        Button(action: {
+                            feedback = .neutral
+                        }) {
+                            Text("😐")
+                                .font(.largeTitle)
+                                .padding()
+                                .background(feedback == .neutral ? Color.yellow.opacity(0.3) : Color.clear)
+                                .clipShape(Circle())
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        Spacer()
+                        Button(action: {
+                            feedback = .sad
+                        }) {
+                            Text("😢")
+                                .font(.largeTitle)
+                                .padding()
+                                .background(feedback == .sad ? Color.yellow.opacity(0.3) : Color.clear)
+                                .clipShape(Circle())
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        Spacer()
                     }
+                } footer: {
+                    Text("* El estado de animo por defecto será neutro")
                 }
             }
+            .navigationBarItems(trailing:
+                                    Button(action: {
+                showPasswordAlert.toggle()
+            }, label: {
+                Text("Crear nota")
+            }))
+            .navigationBarItems(leading:
+                                    Button(action: {
+                dismiss()
+            }, label: {
+                Text("Cerrar")
+            }))
+            //El modificador .toolbar duplica los botones al mostrarse el popup del password
+//            .toolbar {
+//                ToolbarItem(placement: .topBarLeading) {
+//                    Button {
+//                        dismiss()
+//                    } label: {
+//                        Text("Cerrar")
+//                    }
+//                }
+//                
+//                ToolbarItem {
+//                    Button {
+//                        showPasswordAlert = true
+//                    } label: {
+//                        Text("Crear nota")
+//                    }
+//                }
+//            }
+            .textFieldAlert(isPresented: $showPasswordAlert, viewModel: viewModel, action: { success in
+                if success {
+                    viewModel.createPage(title: title, text: text, feedback: feedback ?? .neutral)
+                    dismiss()
+                }
+            })
             .navigationTitle("Nueva nota")
             .navigationBarTitleDisplayMode(.large)
         }

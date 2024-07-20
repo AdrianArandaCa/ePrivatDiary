@@ -14,6 +14,8 @@ class PageViewModel {
     var datasourceError: DatabaseError?
     var encryptationError: ErrorEncryptation?
     var keyEncryptation: String?
+    var showPasswordAlert: Bool = false
+    var selectedPage: PageModel?
     
     private var createPageUseCase: CreatePageProtocol
     private var fetchAllPagesUseCase: FetchAllPageProtocol
@@ -90,27 +92,42 @@ class PageViewModel {
     
     func encrytationPage(text: String?) -> Data? {
         do {
-            guard let keyEncryptation = self.keyEncryptation else {
+            guard let key = self.keyEncryptation else {
                 return nil
             }
-            return try EncryptationPageUseCase(key: keyEncryptation).encryptationPage(text: text)
+            let data = try EncryptationPageUseCase(key: key).encryptationPage(text: text)
+            keyEncryptation = ""
+            return data
         } catch {
             print("Error \(error.localizedDescription)")
             return nil
         }
     }
+    
     func decrytationPage(page: PageModel) -> String? {
         guard let encripted = page.encripted else {
             return nil
         }
         do {
-            guard let keyEncryptation = self.keyEncryptation else {
+            guard let key = self.keyEncryptation else {
                 return nil
             }
-            return try EncryptationPageUseCase(key: keyEncryptation).decryptationPage(data: encripted)
+            let text = try EncryptationPageUseCase(key: key).decryptationPage(data: encripted)
+            keyEncryptation = ""
+            return text
         } catch {
             print("Error \(error.localizedDescription)")
             return nil
+        }
+    }
+    
+    func addTextDecrypted(identifier: UUID, text: String?) {
+        guard let text = text else {
+            return
+        }
+        if let index = pages.firstIndex(where: {$0.identifier == identifier}) {
+            pages[index].text = text
+            
         }
     }
 }

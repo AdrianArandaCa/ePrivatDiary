@@ -13,7 +13,8 @@ final class PageViewModelTest: XCTestCase {
     var viewModel: PageViewModel!
     
     override func setUpWithError() throws {
-        viewModel = .init(keyEncryptation: "123", createPageUseCase: CreatePageUseCaseMock(),
+        viewModel = .init(keyEncryptation: "123",
+                          createPageUseCase: CreatePageUseCaseMock(),
                           fetchAllPagesUseCase: FetchAllPagesUseCaseMock(),
                           updatePageUseCase: UpdatePageUseCaseMock(),
                           removePageUseCase: RemovePageUseCaseMock())
@@ -114,5 +115,21 @@ final class PageViewModelTest: XCTestCase {
         } else {
             XCTFail()
         }
+    }
+    
+    func testDecryptePage() {
+        //Given
+        let text = "test text"
+        viewModel.keyEncryptation = "123"
+        viewModel.createPage(title: "test title", text: text, feedback: .happy)
+        //When
+        if let page = viewModel.pages.first {
+            viewModel.keyEncryptation = "123"
+            let textDecrypted = viewModel.decrytationPage(page: page)
+            XCTAssertEqual(textDecrypted, text)
+        } else {
+            
+        }
+        
     }
 }

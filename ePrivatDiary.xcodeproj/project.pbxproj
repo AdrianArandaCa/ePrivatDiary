@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AD707372C3CF55E00F652F6 /* TextFieldAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD707362C3CF55E00F652F6 /* TextFieldAlertModifier.swift */; };
 		3AD9E4DA2C3BFE4B00895381 /* PageViewModelIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9E4D92C3BFE4B00895381 /* PageViewModelIntegrationTest.swift */; };
 		3AD9E4DE2C3C053C00895381 /* CreatePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9E4DD2C3C053C00895381 /* CreatePageView.swift */; };
 		3AD9E4E02C3C063B00895381 /* UpdatePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9E4DF2C3C063B00895381 /* UpdatePageView.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AD707362C3CF55E00F652F6 /* TextFieldAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertModifier.swift; sourceTree = "<group>"; };
 		3AD9E4D92C3BFE4B00895381 /* PageViewModelIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModelIntegrationTest.swift; sourceTree = "<group>"; };
 		3AD9E4DD2C3C053C00895381 /* CreatePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePageView.swift; sourceTree = "<group>"; };
 		3AD9E4DF2C3C063B00895381 /* UpdatePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePageView.swift; sourceTree = "<group>"; };
@@ -83,8 +85,17 @@
 			children = (
 				3AD9E4DD2C3C053C00895381 /* CreatePageView.swift */,
 				3AD9E4DF2C3C063B00895381 /* UpdatePageView.swift */,
+				3AD707382C3CF56700F652F6 /* Modifiers */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3AD707382C3CF56700F652F6 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				3AD707362C3CF55E00F652F6 /* TextFieldAlertModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		3AD9E4DB2C3C031C00895381 /* IntegrationTest */ = {
@@ -309,6 +320,7 @@
 				3AFDA1672C3B37C2001EDD6C /* UpdatePageUseCase.swift in Sources */,
 				3AFDA1692C3B37C9001EDD6C /* RemovePageUseCase.swift in Sources */,
 				3AFDA16B2C3B37D2001EDD6C /* FetchAllNoteUseCase.swift in Sources */,
+				3AD707372C3CF55E00F652F6 /* TextFieldAlertModifier.swift in Sources */,
 				3AFDA1652C3B37B8001EDD6C /* CreatePageUseCase.swift in Sources */,
 				3AFDA16D2C3B380A001EDD6C /* EncryptationPageUseCase.swift in Sources */,
 				3AFDA13F2C3B2D00001EDD6C /* ePrivatDiaryApp.swift in Sources */,
